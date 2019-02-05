@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# To close all the apps.
+for j in "TeamViewer" "pgAdmin3" "Docker";
+do
+    osascript -e 'tell app "'$j'" to quit'
+done
+
+# Since there is a space in the application name, we can kill them using their PID
+for pids in $(ps -ax | grep "Adobe\ Creative\ Cloud\|WebEx\|Vaze" | awk '{print $1}'); do
+	echo $pids	
+	echo "Stopped the apps with PID $k"
+done
+
+
+
+# To open all the apps.
+for i in "Slack" "iTerm" "ClipMenu" "Spotify" "ShiftIt" "Chrome";
+do
+    osascript -e 'tell app "'$i'" to activate'
+done
+
+
+open /Applications/Microsoft\ Outlook.app
+open /Applications/PyCharm\ CE.app
+
+open /Applications/Google\ Chrome.app/ 'https://gmail.com'
+open /Applications/Google\ Chrome.app/ 'https://github.com/'
